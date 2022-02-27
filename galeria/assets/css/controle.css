@@ -1,0 +1,169 @@
+.titulo{
+width: 300px;
+}
+
+td{
+text-align: left;
+color: black;
+font-size: 20;
+}
+ 
+
+
+body { background: #202838; }
+/*botao controle*/
+.switch input {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/*botao*/
+.switch {
+  width: 180px;
+  height: 55px;
+  position: relative;
+  margin: 10px auto;
+}
+
+/*fundo botao*/
+.switch label {
+  display: block;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  background: #1F2736; /*#121823*/
+  background: linear-gradient(#121823, #161d2b);
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: inset 0 3px 8px 1px rgba(0,0,0,0.5),  inset 0 1px 0 rgba(0,0,0,0.5),  0 1px 0 rgba(255,255,255,0.2);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+/*tamanho botao*/
+.switch input ~ label i {
+  display: block;
+  height: 51px;
+  width: 51px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  border-radius: inherit;
+  background: #283446; /* Fallback*/
+  background: linear-gradient(#36455b, #283446);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),  0 0 8px rgba(0,0,0,0.3),  0 12px 12px rgba(0,0,0,0.4);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+/*luz botao*/
+.switch label + span {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 17px;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background: #283446;
+  background: gradient-gradient(#36455b, #283446);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.2),  0 1px 0 rgba(255,255,255,0.1),  0 0 10px rgba(185,231,253,0),  inset 0 0 8px rgba(0,0,0,0.9),  inset 0 -2px 5px rgba(0,0,0,0.3),  inset 0 -5px 5px rgba(0,0,0,0.5);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 2;
+}
+
+/* Toggle */
+
+.switch input:checked ~ label + span {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 2;
+  background: #b9f3fe;
+  background: gradient-gradient(#ffffff, #77a1b9);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.1),  0 1px 0 rgba(255,255,255,0.1),  0 0 10px rgba(100,231,253,1),  inset 0 0 8px rgba( 61,157,247,0.8),  inset 0 -2px 5px rgba(185,231,253,0.3),  inset 0 -3px 8px rgba(185,231,253,0.5);
+}
+
+.switch input:checked ~ label i {
+  left: auto;
+  left: 63%;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),  0 0 8px rgba(0,0,0,0.3),  0 8px 8px rgba(0,0,0,0.3),  inset -1px 0 1px #b9f3fe;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+
+/*botao 2*/
+.botao {
+  background-color:#3bb3e0;
+  padding:10px;
+  position:relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size:12px;
+  text-decoration:none;
+  color:#fff;
+  -webkit-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 6px 0px #156785;
+  -moz-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 6px 0px #156785;
+  -o-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 6px 0px #156785;
+  box-shadow: inset 0px 1px 0px #7fd2f1, 0px 6px 0px #156785;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.botao::before {
+  background-color:#072239;
+  content:"";
+  display:block;
+  position:absolute;
+  width:100%;
+  height:100%;
+  padding-left:2px;
+  padding-right:2px;
+  padding-bottom:4px;
+  left:-2px;
+  top:5px;
+  z-index:-1;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 0px #fff;
+  -moz-box-shadow: 0px 1px 0px #fff;
+  -o-box-shadow: 0px 1px 0px #fff;
+  box-shadow: 0px 1px 0px #fff;
+}
+
+.botao:active {
+  color:#156785;
+  text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+  background:rgb(44,160,202);
+  -webkit-box-shadow: inset 0px 1px 0px #7fd2f1, inset 0px -1px 0px #156785;
+  -moz-box-shadow: inset 0px 1px 0px #7fd2f1, inset 0px -1px 0px #156785;
+  -o-box-shadow: inset 0px 1px 0px #7fd2f1, inset 0px -1px 0px #156785;
+  box-shadow: inset 0px 1px 0px #7fd2f1, inset 0px -1px 0px #156785;
+  top:7px;
+}
+
+.botao:active::before {
+  top:-2px;
+}
